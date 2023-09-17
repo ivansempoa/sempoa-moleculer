@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.3.1",
+    "ioredis": "^5.3.2",
+    "mariadb": "^3.2.1",
+    "moleculer": "^0.14.31",
+    "moleculer-db": "^0.8.24",
+    "moleculer-db-adapter-sequelize": "^0.2.15",
+    "moleculer-web": "^0.10.6",
+    "sequelize": "^6.33.0"
+  },
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services --env",
+    "start": "moleculer-runner --env",
+    "deps": "npm-check -u",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "docker:build": "docker build -t conduit ."
+  },
+  "devDependencies": {
+    "moleculer-repl": "^0.7.4"
+  }
+}
